@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'crawl.spiders'
 
 MONGO_URI = "mongodb://localhost:27017"
 MONGO_DB = "zhihu"
-REDIS_URI = 'redis://localhost:6379/1'
+REDIS_URI = {"host": "localhost", "port": 6379, "db": 0, "password": None}
 COOKIE_STR = uuid.uuid4().get_hex()
 DEBUG = False
 STATIC_PATH = os.path.join(os.path.abspath(__file__), 'static')

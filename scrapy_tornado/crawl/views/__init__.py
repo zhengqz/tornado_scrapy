@@ -6,6 +6,9 @@ Author: shylock
 """
 
 from .api import api_routes
-from .index import base_routes
+from .base import base_routes
 
 urls = []
+
+urls += api_routes
+urls += base_routes

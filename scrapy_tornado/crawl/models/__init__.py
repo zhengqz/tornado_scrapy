@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*-coding:utf-8 -*-
 """
-Created on 2016/05/05
+Created on 2016/05/07
 Author: shylock
 """
-
-base_routes = []

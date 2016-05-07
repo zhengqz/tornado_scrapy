@@ -25,7 +25,8 @@ class Application(tornado.web.Application):
             autoscape=None,
         )
 
-        self.rdc = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db)
+        self.rdc = redis.StrictRedis(host=redis_uri.get("host", "localhost"), port=redis_uri.get("port", 8379),
+                                     db=redis_uri.get("db", 0), password=redis_uri.get("password", None))
         self.db = motor.MotorClient(config.MONGO_URI).zhihu
         self.template = template.Loader(config.TEMPLATE)
 

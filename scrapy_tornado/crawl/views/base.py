@@ -11,6 +11,7 @@ import json
 from bson import json_util
 import logging
 
+base_routes = []
 
 class BaseHandler(web.RequestHandler):
     def __init__(self, *args, **kwargs):
